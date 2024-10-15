@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 using namespace std;
 int main() {
+    setlocale(LC_ALL, "Russian");
     cout << "Простые числа в диапазоне от 2 до 1000: ";
 
     for (int i = 2; i <= 1000; i++) {
