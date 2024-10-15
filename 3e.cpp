@@ -1,21 +1,19 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 int main() {
-    cout << "Простые числа в диапазоне от 2 до 1000: ";
-
-    for (int i = 2; i <= 1000; i++) {
-        int isPrime = 1;
-        for (int j = 2; j * j <= i; j++) { 
-            if (i % j == 0) {
-                isPrime = 0; 
-                break;
-            }
+    setlocale(LC_ALL, "Russian");
+    int h;
+    cout << "Введите высоту елки: ";
+    cin >> h;
+    for (int i = 1; i <= h; i++) {
+        for (int j = 1; j <= h - i; j++) {
+            cout << " ";
         }
-        if (isPrime == 1) {
-            cout << i << " ";
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            cout << "*";
         }
+        cout << endl;
     }
-    cout << endl;
+
     return 0;
 }
-
